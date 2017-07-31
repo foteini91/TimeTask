@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="TImeTask.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TImeTask"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <StackPanel x:Name="PanelTime" Height="160" Width="300">
+            <TextBlock x:Name="Time" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="50"></TextBlock>
+        </StackPanel>
+
+        <StackPanel x:Name="ButtonPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="stop"
+                    Content="Stop"
+                    Height="100" 
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    Background="LightGray"
+                    FontSize="15"
+                    Click="OnClickStop"/>
+
+            <Button x:Name="restart"
+                    Content="Restart"
+                    Height="100" 
+                    Width="150"
+                    HorizontalAlignment="Right"
+                    Background="LightGray"
+                    FontSize="15"
+                    Click="OnClickRestart"/>
+        </StackPanel>
+
+        <StackPanel x:Name="Times" Orientation="Horizontal">
+            <StackPanel x:Name="sp1" Orientation="Vertical">
+                <ListViewHeaderItem Name="Stop" Content="Stop" FontStyle="Italic" FontSize="25"></ListViewHeaderItem>
+                <ListView x:Name="StopTimes"></ListView>
+            </StackPanel>
+            <StackPanel x:Name="sp2" Orientation="Vertical">
+                <ListViewHeaderItem Name="res" Content="Restart" FontStyle="Italic" FontSize="25"></ListViewHeaderItem>
+                <ListView x:Name="RestartTimes"></ListView>
+            </StackPanel>
+            <StackPanel x:Name="sp3" Orientation="Vertical">
+                <ListViewHeaderItem Name="elps" Content="Elapse" FontStyle="Italic" FontSize="25"></ListViewHeaderItem>
+                <ListView x:Name="elapse"></ListView>
+            </StackPanel>
+            <StackPanel x:Name="sp4" Orientation="Vertical">
+                <ListViewHeaderItem Name="total" Content="Total" FontStyle="Italic" FontSize="25"></ListViewHeaderItem>
+                <ListView x:Name="total_el"></ListView>
+            </StackPanel>
+
+
+
+
+        </StackPanel>
+
+
+
+    </StackPanel>
+</Page>
